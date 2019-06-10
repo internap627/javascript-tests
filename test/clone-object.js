@@ -7,3 +7,11 @@ describe('clone object', function () {
     expect(obj).not.toBe(expected);
   });
 });
+
+const clone = (object) => {
+  let obj = {}
+  for(key in object){
+    obj[key] = object[key]
+  }
+  return obj
+}

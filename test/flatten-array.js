@@ -6,3 +6,15 @@ describe('flatten array', function () {
     expect(arr).toEqual(expected);
   });
 });
+
+function flatten(arr) {
+  var newArr = [];
+  for (var i = 0; i < arr.length; i++) {
+    if (typeof(arr[i]) === 'object') {
+      newArr = newArr.concat(flatten(arr[i]));
+    } else {
+      newArr.push(arr[i]);
+    }
+  }
+  return newArr.sort((a,b) => a - b)
+}

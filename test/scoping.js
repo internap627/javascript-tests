@@ -22,3 +22,9 @@ describe('scoping', function () {
     expect(mod.req()).toBe('bar');
   });
 });
+
+const cat = {
+  name: 'Paul',
+  color: 'white',
+  speak: () => {'meow'}
+}
