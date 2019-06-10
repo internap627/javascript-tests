@@ -24,7 +24,9 @@ describe('scoping', function () {
 });
 
 const cat = {
-  name: 'Paul',
+  name: 'Fluff',
   color: 'white',
-  speak: () => {'meow'}
+  speak: function() {
+   return `Meow, my name is ${this.name}`
+  }
 }
